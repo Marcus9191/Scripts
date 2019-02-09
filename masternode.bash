@@ -22,7 +22,7 @@ echo $user:$2 | chpasswd
 echo "Changed."
 
 echo -n "[$(date +"%T")] Disabling root login... "
-sed -i '/^PermitRootLogin[ \t]\+\w\+$/{ s//PermitRootLogin no/g; }' /etc/ssh/ss$
+sed -i '/^PermitRootLogin[ \t]\+\w\+$/{ s//PermitRootLogin no/g; }' /etc/ssh/sshd_config
 service ssh restart
 echo "Disabled"
 
