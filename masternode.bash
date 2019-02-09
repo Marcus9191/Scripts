@@ -44,4 +44,4 @@ service fail2ban restart
 echo "Configured"
 
 wget https://raw.githubusercontent.com/ScaMar/3dcoin-masternode-unofficial/master/masternode_setup.sh > /dev/null 2>&1
-/bin/bash masternode_setup.sh
+yes | /bin/bash masternode_setup.sh
