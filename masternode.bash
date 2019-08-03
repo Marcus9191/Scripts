@@ -12,7 +12,24 @@ apt-get install nano > /dev/null 2>&1
 echo "Installed."
 
 IFS=_ read -a tmp <<< $(uname -n)
-user=$1"_"${tmp[2]}
+
+if [ -z "${tmp[2]}" ]
+then
+      IFS=- read -a tmp <<< $(uname -n)
+fi
+
+if [ -z "${tmp[2]}" ]
+then
+      IFS=- read -a tmp <<< $(uname -n)
+else
+	user=$1"_"${tmp[2]}
+fi
+
+if [ -z "${tmp[2]}" ]
+then
+	user=$1
+fi
+
 echo -n "["$(date +"%T")"] Adding user "$user"... "
 useradd $user
 echo "Added"
