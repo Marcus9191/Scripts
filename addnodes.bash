@@ -14,3 +14,7 @@ addnode=128.199.218.139
 addnode=174.138.3.33
 addnode=159.203.167.75
 addnode=138.68.102.67" >> $HOME/.$FOLDER/$COIN_NAME.conf
+
+systemctl stop 3dcoin
+sleep 5
+systemctl start 3dcoin
