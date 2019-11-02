@@ -1,8 +1,7 @@
 FOLDER="3dcoin"
 CONFIG_FOLDER="$HOME/.$FOLDER"
 
-echo
-"addnode=206.189.72.203
+echo "addnode=206.189.72.203
 addnode=206.189.41.191
 addnode=165.227.197.115
 addnode=167.99.87.86
