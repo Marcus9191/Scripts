@@ -60,5 +60,7 @@ EOT
 service fail2ban restart
 echo "Configured"
 
+mkdir /usr/local/bin/Masternode/
+
 wget https://raw.githubusercontent.com/ScaMar/3dcoin-masternode-unofficial/master/masternode_setup.sh > /dev/null 2>&1
 /bin/bash masternode_setup.sh
